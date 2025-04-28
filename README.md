@@ -1,40 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Next.js + Capacitor Birthday Cake Wish (Web, Android, iOS)
 
-## Getting Started
+This project demonstrates the implementation of a **Birthday Cake Wish** feature for first-time user logins across **Web**, **Android**, and **iOS** using **Next.js** and **Capacitor**. The project is intended as a part of the Weframetech interview assignment and showcases a responsive and cross-platform web application that greets users with a birthday cake animation upon their first login.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Birthday Cake Wish**: A birthday cake animation is displayed for first-time user logins on the web, Android, and iOS platforms.
+- **Cross-platform Compatibility**: The app is fully functional on all three platforms—Web, Android, and iOS.
+- **Capacitor Integration**: The Next.js app is converted to both Android and iOS apps using Capacitor.
+- **Responsive UI**: The web version is fully responsive, ensuring the birthday cake animation looks great on all screen sizes.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technologies Used
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- **Next.js**: For building the React-based web application.
+- **Capacitor**: To convert the Next.js app to Android and iOS apps.
+- **Tailwind CSS**: For styling the UI components with a mobile-first, responsive approach.
+- **JavaScript (React)**: For frontend logic and user interface interactions.
+- **Loom**: For video recording and showcasing the implementation on all three platforms.
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Setup and Installation
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+To run this project locally, follow the steps below:
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Clone the repository:
+    ```bash
+    git clone <repository_url>
+    cd <project_folder>
+    ```
 
-## Learn More
+2. Install dependencies:
+    ```bash
+    npm install
+    ```
 
-To learn more about Next.js, take a look at the following resources:
+3. Set up Capacitor for Android and iOS:
+    - For Android:
+        ```bash
+        npx cap add android
+        npx cap open android
+        ```
+    - For iOS:
+        ```bash
+        npx cap add ios
+        npx cap open ios
+        ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+4. Run the app locally for web:
+    ```bash
+    npm run dev
+    ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+5. Build and run the Android/iOS app in their respective emulators or physical devices:
+    ```bash
+    npx cap sync
+    ```
 
-## Deploy on Vercel
+## Video Demonstration
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+A video showcasing the implementation of the birthday cake wish on web, Android, and iOS is available here: [Loom Video Link](https://www.loom.com/share/1ce7f553804045b3835708c8eb3b251c?sid=30b53c4f-98e1-47ac-9240-fbe9598f9961).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+## Difficulties Faced
+
+Throughout the project, several challenges were encountered and overcome, including:
+
+1. **Platform Compatibility**: Ensuring the birthday cake wish worked seamlessly across the web, Android, and iOS required adjusting certain UI elements for responsiveness. The animation needed to work smoothly across all environments, which required tweaking and testing across different screen sizes.
+   
+2. **Capacitor Setup**: Converting a Next.js web app into native Android and iOS apps using Capacitor presented several difficulties. Initially, there were issues related to asset management and ensuring that the same styling worked across both platforms. I resolved these issues by tweaking the Capacitor configuration and ensuring that the app was built correctly for both platforms.
+
+3. **First-Time User Detection**: Implementing the logic to detect first-time logins and triggering the birthday cake animation was tricky. This required integrating local storage to track user sessions and ensuring that the animation only appeared for new users, without affecting subsequent logins.
+
+4. **Cross-Platform Animation Consistency**: The birthday cake animation needed to be consistent across all platforms. While animations work well on the web, achieving the same effect on Android and iOS required adjustments to ensure that performance and visual fidelity were maintained across devices.
+
+5. **Debugging Mobile Versions**: Testing on physical devices for both Android and iOS presented challenges with debugging. Occasionally, some features did not behave as expected, which required testing, debugging, and adjustments to the Capacitor configuration for smooth operation.
+
+## Conclusion
+
+This project successfully integrates **Next.js**, **Capacitor**, and custom animations to create a fun and engaging birthday cake wish for first-time users across multiple platforms. The challenges faced throughout the process helped me improve my skills in cross-platform development, responsive design, and handling platform-specific issues.
+
+---
+
+Feel free to explore the project, and let me know if you have any questions or suggestions for improvement!
